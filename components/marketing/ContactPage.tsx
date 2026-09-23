@@ -26,7 +26,7 @@ export function ContactPage() {
     try { await navigator.clipboard.writeText(draft.body); setNotice('Inquiry copied. Paste it into an email to ' + email + '.'); }
     catch { setNotice('Copy is unavailable. Select and copy the inquiry text below.'); }
   }
-  return <div className="min-h-screen">
+  return <div className="contact-page min-h-screen bg-canvas text-ink">
     <header className="border-b border-gray-200 bg-white text-gray-900"><nav aria-label="Contact navigation" className="mx-auto flex h-24 max-w-[1200px] items-center justify-between gap-5 px-6"><Brand light /><Link href="/" className="inline-flex items-center gap-2 text-xs text-gray-600 hover:text-gray-900"><ArrowLeft size={14} />Back to home</Link></nav></header>
     <main className="mx-auto grid max-w-[1160px] gap-12 px-6 py-14 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-20">
       <div><p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#d9ba7e]">A conversation is a good beginning</p><h1 className="mt-6 text-5xl font-medium leading-[1.08] tracking-heading md:text-6xl">Your next chapter.<br /><span className="text-[#d9ba7e]">Let’s talk about it.</span></h1><p className="mt-6 max-w-sm text-sm leading-7 text-muted">Bring us a people challenge, a business ambition, or a question. We’ll start by understanding what matters to you.</p><div className="mt-10 space-y-5"><a href={`mailto:${email}`} className="flex items-center gap-3 text-sm"><span className="rounded-full border border-line bg-surface p-3"><Mail size={16} strokeWidth={1.5} /></span><span className="break-all">{email}</span></a><a href="tel:+919106766028" className="flex items-center gap-3 text-sm"><span className="rounded-full border border-line bg-surface p-3"><Phone size={16} strokeWidth={1.5} /></span>+91 91067 66028</a></div><div className="mt-12 border-t border-line pt-6"><p className="text-xs font-medium">A thoughtful first step.</p><p className="mt-3 max-w-sm text-xs leading-6 text-muted">Share a little about your organisation and the support you’re looking for. We can explore the right starting point together.</p></div></div>
@@ -42,9 +42,10 @@ export function ContactPage() {
         <p role="status" aria-live="polite" className="mt-4 text-xs leading-6 text-[#d9ba7e]">{notice}</p>
         {draft && <div className="mt-4 rounded-xl border border-line bg-[#182334] p-4"><div className="flex items-center gap-2 text-sm font-medium"><Check size={16} />Ready for your review</div><textarea aria-label="Prepared inquiry" readOnly value={draft.body} rows={6} className={`${field} text-xs leading-6`} /><div className="mt-4 flex flex-wrap gap-3"><a href={draft.url} className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-xs text-black">Open email app<ArrowUpRight size={13} /></a><Button variant="secondary" size="sm" onClick={copy} className="rounded-full"><Copy size={13} />Copy inquiry</Button></div><p className="mt-3 text-[11px] leading-5 text-muted">No email app configured? Copy the inquiry and email it to {email}.</p></div>}
       </BentoCard>
-    </main><footer className="mx-auto flex max-w-[1112px] flex-wrap justify-between gap-4 border-t border-line px-6 py-6 text-[10px] text-muted"><span>© {new Date().getFullYear()} Strategies Studio</span><Link href="/#services">Explore our services ↗</Link></footer>
+    </main><footer className="mx-auto flex max-w-[1112px] flex-wrap justify-between gap-4 border-t border-line px-6 py-6 text-[10px] text-muted"><span>© {new Date().getFullYear()} Strategies Studio</span><Link href="/#capabilities">Explore our services ↗</Link></footer>
   </div>;
 }
+
 
 
 

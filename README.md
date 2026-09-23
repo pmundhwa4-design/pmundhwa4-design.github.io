@@ -1,39 +1,27 @@
-# Strategies Studio
+# Strategies Studio — immersive experience
 
-Next.js App Router website adapted to Strategies Studio’s HR consulting content while retaining the original minimalist design, Tailwind tokens, shared components, and Framer Motion transitions.
+An original, Lusion-inspired HR consulting experience built with Next.js, React, TypeScript, and Three.js. A persistent WebGL scene evolves across six scroll chapters. All geometry and environment lighting are generated locally; no model downloads or external asset requests are required.
 
 ## Run
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-Visit http://localhost:3000. Build with `npm run build`. The deployable static site is generated in `out/`; use `npm run dev` for local development. `next start` is not used for static exports.
+Open http://localhost:3000. `pnpm build` generates the static GitHub Pages site in `out/`. `pnpm typecheck` checks TypeScript.
 
-## Content and structure
+## Features
 
-- `components/marketing/LandingPage.tsx`: hero, HR overview, six services, about, approach accordion, why-us, contact links, and footer.
-- `components/Brand.tsx`: typographic Strategies Studio brand treatment.
-- `components/ui/`: reusable Button, BentoCard, and StatusPill.
-- `app/layout.tsx`: updated page metadata.
-- `/dashboard` redirects to the services section; original banking components remain as unused source files.
+- Procedural chrome knot, warm central core, orbital geometry, environment reflections, and atmospheric particles.
+- Smoothed scroll choreography, pointer parallax, changing lighting, and interactive partnership principles.
+- Accessible service disclosures, keyboard-dismissable project dialogs, mobile navigation, and animation pause.
+- Reduced-motion support, lower mobile geometry and pixel density, lazy-loaded WebGL, and adaptive rendering resolution.
+- Company information, six HR services, partnership principles, and the five-stage approach adapted from https://strategiesstudio.com/, /about.html, /services.html, and /why-us.html. The supplied landscape logo is used in the header, footer, and contact page.
+- Contact leads to the inquiry form, which prepares an email for the visitor to review and send; it does not claim server-side submission.
 
-Sources reviewed September 23, 2026:
-- https://strategiesstudio.com/
-- https://strategiesstudio.com/services.html
-- https://strategiesstudio.com/about.html
-- https://strategiesstudio.com/why-us.html
+The existing `/contact/` inquiry form remains available. The retired dashboard redirects to capabilities.
 
-Descriptions are adapted from published content. Experience figures come from the source site. Consultation links lead to /contact. The form validates input and prepares an email draft for review, with a copy fallback. It does not transmit or store inquiries; visitors send through their own email application. Contact details use the existing local Strategies Studio contact page.
+## Verification
 
-
-
-## GitHub Pages deployment
-
-1. In the GitHub repository, open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-2. Commit and push these changes to `main`.
-3. Watch **Actions → Deploy Next.js to GitHub Pages**. It installs the locked dependencies, builds Next.js, and publishes `out/`.
-4. Visit https://pmundhwa4-design.github.io/ after the workflow succeeds.
-
-The workflow can also be started manually from Actions. Do not publish the source branch through Jekyll. The custom domain is not changed by this configuration. The contact form remains an email-draft handoff, which works without a backend on GitHub Pages.
+`verify-experience.cjs` exercises desktop/mobile behavior with Playwright using the bundled Windows runtime. Adjust its Playwright module path for other systems. Covers WebGL initialization, all six chapters, pause/play, disclosures, dialogs, reduced motion, navigation, anchor integrity, overflow, and browser exceptions.
