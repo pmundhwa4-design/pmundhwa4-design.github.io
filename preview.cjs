@@ -2,7 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const root = path.join(__dirname, 'public');
+const root = __dirname;
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -23,6 +23,11 @@ const server = http.createServer((req, res) => {
     pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
   } catch {
     res.writeHead(400).end('Bad request');
+    return;
+  }
+
+  if (pathname.split('/').some(part => part.startsWith('.'))) {
+    res.writeHead(404).end('Not found');
     return;
   }
 
