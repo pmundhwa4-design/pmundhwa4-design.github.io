@@ -1,0 +1,4 @@
+/* All presentation lives in Tailwind utilities; no custom CSS rules. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

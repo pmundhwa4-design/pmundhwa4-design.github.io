@@ -1,17 +1,29 @@
 # Strategies Studio
 
-The website is published at <https://pmundhwa4-design.github.io/>.
+Next.js App Router website adapted to Strategies Studio’s HR consulting content while retaining the original minimalist design, Tailwind tokens, shared components, and Framer Motion transitions.
 
-GitHub Pages is set to deploy from the `main` branch's repository root. Keep the website files, including `index.html`, at the root. Push changes to `main` to publish them; GitHub's `pages-build-deployment` workflow handles the deployment.
+## Run
 
-## Preview locally
-
-Install Node.js, open a terminal in this repository, and run:
-
-```powershell
-node preview.cjs
+```sh
+npm install
+npm run dev
 ```
 
-Open the local URL printed in the terminal. If port 4173 is in use, the server tries the next available port. Stop it with `Ctrl+C`.
+Visit http://localhost:3000. Build with `npm run build`, then serve with `npm start`.
 
-The inquiry form retains the existing Formspree endpoint. Check Formspree delivery and allowed-domain settings after publishing.
+## Content and structure
+
+- `components/marketing/LandingPage.tsx`: hero, HR overview, six services, about, approach accordion, why-us, contact links, and footer.
+- `components/Brand.tsx`: typographic Strategies Studio brand treatment.
+- `components/ui/`: reusable Button, BentoCard, and StatusPill.
+- `app/layout.tsx`: updated page metadata.
+- `/dashboard` redirects to the services section; original banking components remain as unused source files.
+
+Sources reviewed September 23, 2026:
+- https://strategiesstudio.com/
+- https://strategiesstudio.com/services.html
+- https://strategiesstudio.com/about.html
+- https://strategiesstudio.com/why-us.html
+
+Descriptions are adapted from published content. Experience figures come from the source site. Consultation links lead to /contact. The form validates input and prepares an email draft for review, with a copy fallback. It does not transmit or store inquiries; visitors send through their own email application. Contact details use the existing local Strategies Studio contact page.
+
