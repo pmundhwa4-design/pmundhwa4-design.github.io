@@ -4,3 +4,13 @@ out/
 *.tsbuildinfo
 .env*.local
 .next-dev/
+
+# Local credentials and verification output
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db

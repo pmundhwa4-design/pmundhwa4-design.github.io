@@ -1,3 +1,4 @@
+require('node:fs').mkdirSync('test-results', { recursive: true });
 const { chromium } = require('C:/Users/parth/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const assert = require('node:assert/strict');
 (async () => {
@@ -19,7 +20,7 @@ const assert = require('node:assert/strict');
  assert.deepEqual(badAnchors,[]);
  for(const section of ['#services','#payroll','#approach','#why-us']) await page.locator(section).scrollIntoViewIfNeeded();
  await page.evaluate(()=>window.scrollTo(0,0));
- await page.screenshot({path:'strategies-desktop.png',fullPage:true});
+ await page.screenshot({path:'test-results/strategies-desktop.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});
  await page.goto('http://localhost:3000',{waitUntil:'networkidle'});
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
@@ -28,7 +29,7 @@ const assert = require('node:assert/strict');
  assert.equal(await page.getByRole('navigation',{name:'Mobile navigation'}).count(),0);
  for(const section of ['#services','#payroll','#approach','#why-us']) await page.locator(section).scrollIntoViewIfNeeded();
  await page.evaluate(()=>window.scrollTo(0,0));
- await page.screenshot({path:'strategies-mobile.png',fullPage:true});
+ await page.screenshot({path:'test-results/strategies-mobile.png',fullPage:true});
  await page.goto('http://localhost:3000/dashboard',{waitUntil:'networkidle'});
  assert.match(page.url(),/\/#services$/);
  assert.deepEqual(errors,[]);
