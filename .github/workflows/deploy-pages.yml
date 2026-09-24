@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy final website to GitHub Pages
 on:
   push:
     branches: [main]
@@ -18,15 +18,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-      - uses: pnpm/action-setup@v4
       - uses: actions/configure-pages@v5
-      - name: Install locked dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build static website
-        run: pnpm build
+      - name: Validate final website
+        run: node scripts/validate-site.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: site
   deploy:
     needs: build
     runs-on: ubuntu-latest

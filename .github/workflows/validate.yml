@@ -12,8 +12,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-      - uses: pnpm/action-setup@v4
-      - name: Install locked dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build and type-check static website
-        run: pnpm build
+      - name: Validate final website
+        run: node scripts/validate-site.cjs
