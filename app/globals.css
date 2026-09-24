@@ -31,3 +31,65 @@
 @media(max-width:360px){.brand-logo{width:205px}.hero h1{font-size:48px}.studio-stats{gap:12px}}
 
 @media(max-width:700px){.contact-page header nav{gap:12px;padding-left:16px;padding-right:16px}.contact-page header img{width:175px}.contact-page header nav>a:last-child{font-size:10px;gap:5px}}
+
+/* Immersive landscape hero: type is anchored to the foreground. */
+.hero{height:100svh;min-height:760px;background:linear-gradient(180deg,#e9e8e210 36%,#e9e8e200 50%,#e9e8e2dd 100%)}
+.hero .hero-kicker{top:20%;left:4.5%;font-size:9px;letter-spacing:1.5px}
+.hero .hero-title{top:auto;bottom:15%;left:4.5%;right:4.5%;display:flex;align-items:flex-end;justify-content:space-between;gap:35px}
+.hero h1{font-size:clamp(76px,8.3vw,138px);line-height:.87;letter-spacing:-.072em;max-width:780px;color:#23243a}
+.hero h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.07em}
+.hero .hero-bottom{margin:0 0 9px;display:flex;gap:27px;align-items:center}
+.hero .hero-bottom p{font-size:11px;line-height:1.8;max-width:300px}
+.hero .object-label{top:25%;right:6%;bottom:auto}
+.hero .hero-foot{bottom:35px}
+.chapter:not(.hero){background-color:#e9e8e2a8}
+.chapter.work,.chapter.contact{background-color:#e9e8e2c9}
+.world-fallback{background:radial-gradient(ellipse at 50% 40%,#b4b8be 0%,#e5e5dc 50%)}
+@media(max-width:700px){.hero{min-height:740px}.hero .hero-kicker{top:17%;left:6%;font-size:7px;letter-spacing:.8px}.hero .hero-title{left:6%;right:6%;bottom:16%;display:block}.hero h1{font-size:clamp(58px,15vw,88px)}.hero .hero-bottom{margin-top:28px;justify-content:space-between;gap:10px}.hero .hero-bottom p{font-size:10px}.hero .object-label{top:30%;right:10%;font-size:6px}.hero .object-label>span:last-child{font-size:6px}.hero .hero-foot{bottom:40px}.chapter:not(.hero){background-color:#e9e8e278}}
+
+/* Liquid particle direction, based on the supplied visual reference. */
+.experience{--paper:#101416;--black:#edf1ee;--orange:#dbb555;color:#edf1ee;background:#080b0d}
+.world{background:#080b0d}
+.hero{background:linear-gradient(180deg,#080b0d15 30%,#080b0d00 50%,#080b0dbb 100%)}
+.hero h1{color:#f0f2ed}
+.site-header .brand-logo{mix-blend-mode:normal;background:#f2f1eb;border-radius:3px;width:235px;padding:7px 12px}
+.hero .hero-kicker,.hero .object-label{color:#c2cfcd}
+.object-label>span:last-child{color:#869795}
+.hero .hero-title{bottom:13%}
+.hero .hero-bottom p{color:#c5cecb}
+.hero-foot{border-color:#cbd5d333;color:#aebcb8}
+.circle-link{border-color:#cad7d066}
+.chapter:not(.hero){background-color:#080b0d99}
+.chapter.work,.chapter.contact{background-color:#080b0dba}
+.section-content>p,.eyebrow,.studio-stats span,.project-name small{color:#a8bab6}
+.service-list details,.service-list details:last-child,.process li,.project-row,.project-row:last-child,.studio-stats{border-color:#899b9344}
+.project-row.selected{background:#cadfd00c}
+.contact footer .brand-logo{mix-blend-mode:normal;background:#f2f1eb;padding:8px;border-radius:3px}
+.project-dialog{background:#141c20;color:#e5eeeb}
+.mobile-nav{background:#10181bf5;color:#edf1ee}
+@media(max-width:700px){.site-header .brand-logo{width:205px;padding:5px 8px}.section-content,.section-content.right{background:#10181bba}.chapter:not(.hero){background-color:#080b0d88}.hero .hero-title{bottom:15%}}
+
+/* Floating white glass navigation. */
+.experience .site-header{
+ position:fixed;top:20px;left:50%;right:auto;transform:translateX(-50%);
+ width:calc(100% - 64px);max-width:1240px;min-height:82px;padding:10px 26px;
+ color:#242431;background:rgba(250,251,253,.82);
+ border:1px solid rgba(255,255,255,.78);border-radius:24px;
+ box-shadow:0 8px 32px #00000014,inset 0 1px 0 #ffffff;
+ -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;z-index:40;
+}
+.experience .site-header .brand-logo{width:190px;padding:0;background:transparent;mix-blend-mode:multiply;border-radius:0}
+.experience .desktop-nav{gap:30px;font-size:12px;font-weight:500;letter-spacing:-.1px}
+.experience .desktop-nav>a{transition:background .2s,color .2s;min-height:40px;display:flex;align-items:center;padding:0 10px;border-radius:12px}
+.experience .desktop-nav>a:hover{background:#ffffff80;color:#141038}
+.experience .desktop-nav sup{align-self:center;color:#797986;margin-left:5px}
+.experience .desktop-nav .contact-link{border:1px solid #ffffffaa;border-radius:999px;background:#ffffffa8;padding:0 18px;gap:20px;box-shadow:0 2px 6px #00000006}
+.experience .desktop-nav .contact-link:hover{background:#fff}
+.experience .menu-toggle{border-radius:50%;width:40px;height:40px;place-items:center;background:#ffffff80;color:#242431}
+.experience .mobile-nav{top:103px;left:16px;right:16px;border-radius:22px;padding:14px 22px;background:#f8faf9ed;color:#242431;border:1px solid #ffffffc9;box-shadow:0 15px 40px #0003;-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%);z-index:39;max-height:calc(100svh - 125px);overflow-y:auto}
+.experience .mobile-nav a{font-size:18px;padding:16px 4px;border-bottom:1px solid #20202b16}
+.experience .mobile-nav a:last-child{border-bottom:0}
+.experience .mobile-nav a svg{width:17px}
+@media(max-width:700px){.experience .site-header{top:12px;width:calc(100% - 32px);min-height:76px;padding:9px 16px;border-radius:22px}.experience .site-header .brand-logo{width:172px;padding:0}.experience .menu-toggle{display:grid}.experience .desktop-nav{display:none}}
+@media(prefers-reduced-transparency:reduce){.experience .site-header,.experience .mobile-nav{background:#f5f6f8}}

@@ -13,8 +13,8 @@ Open http://localhost:3000. `pnpm build` generates the static GitHub Pages site 
 
 ## Features
 
-- Procedural chrome knot, warm central core, orbital geometry, environment reflections, and atmospheric particles.
-- Smoothed scroll choreography, pointer parallax, changing lighting, and interactive partnership principles.
+- Procedural metallic landscape, layered ribbon gateway, environment reflections, and atmospheric particles.
+- Cinematic camera entrance, scroll-driven travel through the landscape, pointer parallax, and interactive partnership principles.
 - Accessible service disclosures, keyboard-dismissable project dialogs, mobile navigation, and animation pause.
 - Reduced-motion support, lower mobile geometry and pixel density, lazy-loaded WebGL, and adaptive rendering resolution.
 - Company information, six HR services, partnership principles, and the five-stage approach adapted from https://strategiesstudio.com/, /about.html, /services.html, and /why-us.html. The supplied landscape logo is used in the header, footer, and contact page.
