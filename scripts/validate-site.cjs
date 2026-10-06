@@ -3,7 +3,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '../site');
-for (const page of ['index', 'services', 'journey', 'tools', 'about', 'contact']) {
+for (const page of ['index', 'services', 'journey', 'tools', 'about', 'contact', 'careers']) {
   const html = fs.readFileSync(path.join(root, page + '.html'), 'utf8');
   assert.equal((html.match(/<h1\b/g) || []).length, 1, page + ': one main heading');
   for (const [, href] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
@@ -17,4 +17,4 @@ for (const page of ['index', 'services', 'journey', 'tools', 'about', 'contact']
   }
 }
 new vm.Script(fs.readFileSync(path.join(root, 'assets/site.js'), 'utf8'));
-console.log('Validated six pages, local links/assets, anchors, and JavaScript syntax.');
+console.log('Validated seven pages, local links/assets, anchors, and JavaScript syntax.');

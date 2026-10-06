@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>HR Health Check & Attrition Calculator — Strategies Studio</title>
-<meta name="description" content="Strategies Studio is an Ahmedabad HR consultancy for SMEs and enterprises: HR strategy, talent acquisition, engagement, training, compliance, payroll and benefits — designed and implemented with you.">
+<title>Careers — Strategies Studio</title>
+<meta name="description" content="Explore careers at Strategies Studio. Check back for vacancies, role details and application instructions.">
 <meta name="theme-color" content="#120F3A">
-<meta property="og:title" content="HR Health Check & Attrition Calculator — Strategies Studio">
-<meta property="og:description" content="End-to-end HR solutions for growth-focused organisations, from hire to inspire.">
+<meta property="og:title" content="Careers — Strategies Studio">
+<meta property="og:description" content="Explore careers at Strategies Studio. Check back for vacancies, role details and application instructions.">
 <link rel="icon" href="assets/image-1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,52 +43,43 @@
 <a class="big" href="tools.html">HR Cost Estimator</a>
 <a class="big" href="journey.html">Journey</a><a class="big" href="careers.html">Careers</a><a class="btn btn-gold" href="contact.html">Book a consultation</a></div>
 
-<main id="main"><nav class="page-crumb" aria-label="Breadcrumb"><div class="wrap"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">HR Cost Estimator</span></div></nav><section class="tools pad" id="tools" aria-labelledby="tH">
+<main id="main"><nav class="page-crumb" aria-label="Breadcrumb"><div class="wrap"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Careers</span></div></nav>
+<section class="career-intro pad" aria-labelledby="careerTitle">
+  <div class="wrap career-grid">
+    <div>
+      <p class="eyebrow">Careers at Strategies Studio</p>
+      <h1 class="h-display" id="careerTitle">Your next move.<br>A meaningful one.</h1>
+      <p class="lede">Help organisations build better workplaces. Bring your interest in people, your business perspective and a practical approach to making change happen.</p>
+      <div class="career-actions"><a class="btn btn-gold" href="#vacancies">View vacancies <span aria-hidden="true">↗</span></a><a class="career-link" href="about.html">Get to know the Studio <span aria-hidden="true">→</span></a></div>
+    </div>
+    <aside class="career-note" aria-labelledby="workTitle">
+      <span class="eyebrow">The work behind better workplaces</span>
+      <h2 id="workTitle">People first.<br>Purpose in practice.</h2>
+      <p>Our work connects HR strategy with implementation—from finding the right talent to developing the people already on a team.</p>
+      <div class="career-note-foot"><img src="assets/image-1.png" alt="" width="40" height="63"><span>From hire to inspire.<br><strong>Every move matters.</strong></span></div>
+    </aside>
+  </div>
+</section>
+<section class="career-principles pad" aria-labelledby="principlesTitle">
   <div class="wrap">
-    <div class="head">
-      <h1 class="h-section" id="tH">Check where your HR stands today.</h1>
-      <p class="lede">Two quick tools to size up your people function before we talk. Nothing you enter leaves this page.</p>
-    </div>
-    <div class="tabs" role="tablist" aria-label="HR tools">
-      <button role="tab" aria-selected="true" aria-controls="toolHealth" id="tabHealth">HR health check</button>
-      <button role="tab" aria-selected="false" aria-controls="toolCost" id="tabCost" tabindex="-1">Cost of attrition</button>
-    </div>
-
-    <div class="tool" id="toolHealth" role="tabpanel" aria-labelledby="tabHealth">
-      <div class="tool-main" id="quiz"></div>
-      <div class="tool-side">
-        <div class="gauge" aria-hidden="true">
-          <svg viewBox="0 0 210 210" width="210" height="210"><circle cx="105" cy="105" r="92" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="14"/><circle id="gArc" cx="105" cy="105" r="92" fill="none" stroke="#E3AB1B" stroke-width="14" stroke-linecap="round" stroke-dasharray="578" stroke-dashoffset="578" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.7,.2,1)"/></svg>
-          <div class="val"><div><b id="gVal">0</b><small>out of 100</small></div></div>
-        </div>
-        <h3 id="gTitle">Answer the six questions</h3>
-        <p id="gText">Your score and the area to strengthen first will appear here as you go.</p>
-        <div class="rec" id="gRec" hidden></div>
-        <a class="btn btn-gold" href="contact.html#contact" id="gCta">Discuss my results</a>
-      </div>
-    </div>
-
-    <div class="tool" id="toolCost" role="tabpanel" aria-labelledby="tabCost" hidden>
-      <div class="tool-main">
-        <div class="field"><label for="cEmp">Team size <output id="oEmp"></output></label><input type="range" id="cEmp" min="10" max="2000" step="10" value="120"></div>
-        <div class="field"><label for="cSal">Average annual salary <output id="oSal"></output></label><input type="range" id="cSal" min="200000" max="3000000" step="50000" value="600000"></div>
-        <div class="field"><label for="cAtt">Annual attrition <output id="oAtt"></output></label><input type="range" id="cAtt" min="2" max="60" step="1" value="22"></div>
-        <div class="field"><label for="cRep">Replacement cost per leaver <output id="oRep"></output></label><input type="range" id="cRep" min="20" max="200" step="5" value="50"><small>Share of annual salary spent on hiring, onboarding and lost productivity. Estimates commonly range from half to twice a year’s salary; we default to a conservative 50%.</small></div>
-      </div>
-      <div class="tool-side cost">
-        <p>Estimated yearly cost of attrition</p>
-        <b id="cOut">₹0</b>
-        <p id="cLeavers"></p>
-        <div class="cost-bars">
-          <div>Today<i><s id="bNow" style="width:100%"></s></i></div>
-          <div id="bLbl">If attrition drops by a quarter<i><s class="alt" id="bNew" style="width:75%"></s></i></div>
-        </div>
-        <p id="cSave"></p>
-        <a class="btn btn-gold" href="contact.html#contact" style="margin-top:28px">Plan a retention strategy</a>
-      </div>
+    <div class="head"><div><p class="eyebrow">A shared approach</p><h2 class="h-section" id="principlesTitle">Good work starts with<br>how we show up.</h2></div><p class="lede">The same principles that guide our client partnerships shape how we approach our work.</p></div>
+    <div class="career-cards">
+      <article><span class="career-number">01 / Understand</span><h3>Listen before solving.</h3><p>Start with the people, the business and the context. Thoughtful questions lead to more useful answers.</p></article>
+      <article><span class="career-number">02 / Build</span><h3>Make ideas practical.</h3><p>Connect recommendations to the policies, programmes and everyday actions that help teams move forward.</p></article>
+      <article><span class="career-number">03 / Own</span><h3>See the work through.</h3><p>Take responsibility, communicate clearly and focus on the difference the work makes.</p></article>
     </div>
   </div>
-</section><aside class="page-next"><div class="wrap"><p><small>Your next move</small>Let’s discuss your next move</p><a class="btn btn-navy" href="contact.html">Contact <span aria-hidden="true">↗</span></a></div></aside></main><footer>
+</section>
+<section class="career-enquiry pad" id="vacancies" aria-labelledby="vacanciesTitle">
+  <div class="wrap career-grid">
+    <div><p class="eyebrow">Opportunities</p><h2 class="h-section" id="vacanciesTitle">Find your next role.</h2><p class="lede">Explore opportunities with Strategies Studio.</p></div>
+    <div class="career-apply" id="vacancyList">
+      <!-- Replace this placeholder with vacancy listings when ready. -->
+      <span class="career-number">Vacancies</span><h3>Vacancies will be posted here.</h3><p>Check back for role details and application instructions.</p>
+    </div>
+  </div>
+</section>
+</main><footer>
   <div class="wrap">
     <div class="foot">
       <div><img src="assets/image-4.png" alt="Strategies Studio, designing the workforce of tomorrow"></div>
